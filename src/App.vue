@@ -4,16 +4,29 @@
     <p>All the Star Wars data you've ever wanted:</p>
     <p>Planets, Spaceships, Vehicles, People, Films and Species</p>
     <input-field></input-field>
+    <result></result>
   </div>
 </template>
 
 <script>
 import InputField from "./components/InputField.vue";
+import Result from "./components/Result.vue";
+import axios from "axios";
 
 export default {
   name: 'app',
   components: {
-    InputField
+    InputField,
+    Result
+  },
+  created() {
+    // fetch("https://swapi.co/api/starships/9/")
+    //   .then(res => res.json())
+    //   .then(data => console.log(data))
+    //   .catch(error => console.log(error));
+    axios.get("people/1/")
+      .then(res => console.log(res))
+      .catch(error => console.log(error));
   }
 }
 </script>
