@@ -1,6 +1,7 @@
 <template>
   <div class="single-item">
-    <component :is="currentView"></component>
+    {{ currentView }}
+    <component :is="currentView" :data="info"></component>
   </div>
 </template>
 

@@ -1,9 +1,15 @@
 <template>
   <div class="specy-container">
-    <p>Name: {{ info.name }}</p>
-    <p>Average height: {{ info.average_height }}</p>
-    <p>Classification: {{ info.classification }}</p>
-    <p>Eye-colors: {{ info.eye_colors }}</p>
-    <p>Language: {{ info.language }}</p>
+    <p>Name: {{ data.name }}</p>
+    <p>Average height: {{ data.average_height }}</p>
+    <p>Classification: {{ data.classification }}</p>
+    <p>Eye-colors: {{ data.eye_colors }}</p>
+    <p>Language: {{ data.language }}</p> 
   </div>
 </template>
+
+<script>
+export default {
+  props: ["data"]
+}
+</script>
