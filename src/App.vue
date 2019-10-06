@@ -28,4 +28,12 @@ body {
   font-size: 16px;
   color: #141f1f;
 }
+
+.router-link-active {
+  font-size: 25px;
+  text-decoration: none;
+  color: black;
+  display: block;
+  margin-bottom: 25px;
+}
 </style>

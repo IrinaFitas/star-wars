@@ -1,6 +1,5 @@
 <template>
   <div class="single-item">
-    {{ currentView }}
     <component :is="currentView" :data="info"></component>
   </div>
 </template>
@@ -17,7 +16,7 @@ import Vehicles from "./Vehicles.vue";
 export default {
   data() {
     return {
-      info: {}
+      info: null
     };
   },
   components: {
@@ -36,7 +35,6 @@ export default {
   mounted() {
     axios.get(`${this.$route.params.category}/${this.$route.params.id}`)
       .then(res => {
-        console.log(res);
         this.info = res.data;
       })
       .catch(error => console.log(error));
